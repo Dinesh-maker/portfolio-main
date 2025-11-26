@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Project</title>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Amazon Color Palette -->
+    <style>
+        :root {
+            --amazon-yellow: #FF9900;
+            --amazon-dark: #131A22;
+            --amazon-light-gray: #F3F3F3;
+            --amazon-blue: #146eb4;
+        }
+
+        body {
+            background-color: var(--amazon-light-gray);
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        /* Header */
+        .navbar {
+            background-color: var(--amazon-dark);
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: var(--amazon-yellow) !important;
+        }
+
+        /* Title Section */
+        #title-section {
+            padding: 80px 20px;
+            background-color: white;
+            text-align: center;
+            border-bottom: 4px solid var(--amazon-yellow);
+        }
+
+        #title-section h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--amazon-dark);
+        }
+
+       
+
+        /* Overview Section */
+        #overview {
+            background: white;
+            padding: 50px 20px;
+            margin-top: 20px;
+            border-left: 5px solid var(--amazon-yellow);
+        }
+
+        /* PDF Slider */
+        .carousel-item iframe {
+            width: 100%;
+            height: 550px;
+            border: none;
+        }
+
+        /* Buttons */
+        .action-btn {
+            background-color: var(--amazon-yellow);
+            color: black;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .action-btn:hover {
+            background-color: #e68a00;
+            text-decoration: none;
+            color: white;
+        }
+       
+    /* Amazon Theme Border */
+    .amazon-section {
+        border-left: 6px solid #FF9900;
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 10px;
+        transition: 0.3s ease;
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+
+    /* Hover Interaction */
+    .amazon-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Fade-in Animation */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Image Styling */
+    .section-image {
+        width: 100%;
+        max-width: 220px;
+        border-radius: 8px;
+    }
+    /* Footer Styling */
+    .footer {
+        background: #111;
+        padding: 30px 0;
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+
+    /* Social Icons */
+    .footer .social-icons a {
+        color: #fff;
+        margin: 0 12px;
+        font-size: 22px;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+
+    /* Hover Animation */
+    .footer .social-icons a:hover {
+        color: #FF9900; /* Amazon Yellow */
+        transform: translateY(-5px) scale(1.15);
+    }
+
+    /* Top Yellow Bar */
+    .footer::before {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background: #FF9900;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        margin-top: 15px;
+        opacity: 0.8;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+ <!-- Bootstrap 4 Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <!-- Logo Left -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="assets/images/amazon.png" width="50" height="45" class="mr-2" alt="Logo">
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Center Menu Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+            <ul class="navbar-nav">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="Dineshportfolio.html">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="https://dineshprofessional8.wixsite.com/adtechproject">Adtech Project</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="Amazon_sales.html">Amazon Project</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Github</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+    <!-- Title Section -->
+    <section id="title-section">
+        <h1>Amazon Data Analysis Project</h1>
+        
+    </section>
+
+
+ <!-- Project Overview -->
+  <div class="container my-5">
+
+    <!-- Section 1 -->
+    <div class="row align-items-center amazon-section fade-in mb-4">
+        
+        <!-- Image Left -->
+        <div class="col-md-3 text-center">
+            <img src="assets/images/overview.png"
+                 class="section-image"
+                 alt="Section Image">
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-9">
+            <h2 class="font-weight-bold">Project Overview</h2>
+            <p>
+                Developed an interactive Excel dashboard to analyze Amazon sales data, focusing on
+                sales performance, geographic trends, order status, and product-level insights.
+                The goal was to deliver actionable insights that support data-driven decision-making.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="row align-items-center amazon-section fade-in">
+        
+        <!-- Image Right -->
+        <div class="col-md-6 order-md-2 text-center">
+            <img src="/assets/images/objective.png"
+                 class="section-image"
+                 alt="Section Image">
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-6 order-md-1">
+            <h2 class="font-weight-bold">Objective of the Project</h2>
+            <p>The main objective of this project was to analyze Amazon’s sales data to:</p>
+            <ul>
+                <li>Identify sales patterns and seasonal trends</li>
+                <li>Determine top-performing products and regions</li>
+                <li>Understand cancellation and return rates</li>
+                <li>Evaluate delivery performance and delays</li>
+                <li>Provide actionable recommendations</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+    <!-- <section id="overview" class="container">
+        <h2>Project Overview</h2>
+        <p>
+           Developed an interactive Excel dashboard to analyze Amazon sales data, focusing on sales performance, geographic trends, order status, and product-level insights. The project involved end-to-end data preparation, including cleaning, transformation, and advanced pivot table modeling. The goal was to deliver actionable insights that enable data-driven decision-making, improve sales strategies, optimize delivery performance, and enhance customer satisfaction.
+        </p>
+        
+    </section>
+      <section id="overview" class="container">
+        <h2>Objective of the Project</h2>
+        <p>
+           The main objective of this project is to analyze Amazon’s sales data to:
+        <ul> <li>Identify sales patterns and seasonal trends</li>
+        <li>Determine top-performing products and regions</li>
+        <li>Understand cancellation and return rates</li>
+        <li>Evaluate delivery performance and delays</li>
+        <li>Provide actionable recommendations to improve sales and operational efficienc</li></ul>
+
+  </p>
+    </section> -->
+
+    <!-- PDF Slider Section -->
+    <!-- <section id="slides" class="container mt-5">
+        <h2 class="text-center mb-4">Project PPT Preview</h2>
+
+        <div id="pdfCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#pdfCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#pdfCarousel" data-slide-to="1"></li>
+                <li data-target="#pdfCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <iframe src="sample1.pdf"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe src="sample2.pdf"></iframe>
+                </div>
+                <div class="carousel-item">
+                    <iframe src="sample3.pdf"></iframe>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#pdfCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#pdfCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section> -->
+ <div class="container my-5">
+
+    <!-- Title -->
+    <h3 class="text-center mb-4 font-weight-bold">
+        Excel Dashboard Web Portal Look
+    </h3>
+
+    <!-- Iframe Card Wrapper -->
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body p-0">
+
+            <!-- Responsive Iframe -->
+            <div class="embed-responsive embed-responsive-16by9 rounded-lg overflow-hidden">
+                <iframe class="embed-responsive-item"
+                    src="https://1drv.ms/x/c/094816D588ADEB72/IQSS5qJHiXfcSK8ZtYEhGtkvAXINVlgVYGlJwAuW5Rrq9Xs?em=2&wdAllowInteractivity=False&ActiveCell='Home%20Page'!N8&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True"
+                    frameborder="0" scrolling="no" allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Button Row -->
+    <div class="text-center mt-4">
+        <a href="https://1drv.ms/x/c/094816D588ADEB72/IQSS5qJHiXfcSK8ZtYEhGtkvAXINVlgVYGlJwAuW5Rrq9Xs?e=open"
+           target="_blank"
+           class="btn btn-warning font-weight-bold px-4 py-2"
+           style="border-radius: 8px;">
+            📁 Open in Excel Online
+        </a>
+    </div>
+
+</div>
+
+
+
+    <!-- Buttons -->
+    <!-- <section id="buttons" class="container text-center mt-5 mb-5">
+        <a href="#" class="action-btn mr-3">Download Full Report</a>
+        <a href="#" class="action-btn">View Dashboard</a>
+    </section> -->
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/dinesh-kumar-95397722b/" target="_blank"><i class="fab fa-3x fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-3x fa-github"></i></a>
+            <a href="https://wa.me/892011581" target="_blank"><i class="fab fa-3x fa-whatsapp"></i></a>
+            <a href="dineshprofessional25@gmail.com"><i class="fas fa-3x fa-envelope"></i></a>
+        </div>
+
+        <!-- Footer Text -->
+        <p class="footer-text">© 2026 | Designed by Dinesh | Data Engineer</p>
+    </div>
+</footer>
+</body>
+</html>
