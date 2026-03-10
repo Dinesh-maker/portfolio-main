@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Visualization Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f7;
+      color: #2c3e50;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #e0e40a;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  
+  /* Container background */
+  
+  /* Image styles */
+  .gallery-section img {
+  
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover effect */
+  .gallery-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+    .section-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 20px;
+    }
+
+    .section-content.active {
+      max-height: 500px;
+      padding: 20px;
+    }
+
+    .download-button {
+      background-color: #1175d8;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      padding: 12px 24px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #0f59ad;
+      color: white;
+      text-decoration: none;
+    }
+
+    .skill-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(154, 154, 154, 0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(137, 137, 137, 0.2);
+    }
+
+    .skill-card .icon {
+      font-size: 2.5rem;
+      color: #1175d8;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-size: 24px;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .instagram { background-color: #E1306C; }
+    .linkedin { background-color: #0077B5; }
+    .github { background-color: #333; }
+    .gmail { background-color: #D14836; }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <!-- Profile -->
+    <div class="text-center mb-5">
+      <img src="assets/images/blinkitlogo.jpg" alt="Profile Picture" class="profile-image mb-3" />
+      <h1 class="font-weight-bold">Dynamic Blinkit Power BI Dashboard</h1>
+    </div>
+<!-- images -->
+<div class="container gallery-section">
+  <div class="row">
+    <div class="col-md-6 mb-6">
+      <img src="assets/images/image1.png" class="img-fluid" alt="Image 1">
+    </div>
+    <div class="col-md-6 mb-6">
+      <img src="assets/images/image2.png" class="img-fluid" alt="Image 2">
+    </div>
+  
+  </div>
+</div>
+
+
+
+    <!-- Dashboard -->
+    <div class="mb-5 bg-white rounded shadow-sm overflow-hidden">
+      <iframe class="w-100" style="height: 500px; border: none;" src="https://app.powerbi.com/reportEmbed?reportId=3abb1638-8cf7-4988-a95e-0fb5648074ae&autoAuth=true&ctid=5b9dc50e-c330-409a-a520-8f63fb1b574c" title="Dashboard" allowfullscreen></iframe>
+    </div>
+
+    <!-- Sections -->
+    <div id="accordion">
+      <div class="card mb-3">
+        <div class="card-header d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#section1">
+          <h5 class="mb-0">Overview Of Project</h5>
+          <span class="section-toggle">+</span>
+        </div>
+        <div id="section1" class="collapse">
+          <div class="card-body">
+            <p>Developed a comprehensive Power BI dashboard for Blinkit to analyze key business metrics across sales performance, customer behavior, and feedback insights. The goal was to deliver actionable intelligence that supports data-driven decision-making, enhances customer retention, and identifies growth opportunities.
+      
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#section2">
+          <h5 class="mb-0">Sales Overview Report</h5>
+          <span class="section-toggle">+</span>
+        </div>
+        <div id="section2" class="collapse">
+          <div class="card-body">
+            <p>Analyzed sales performance across multiple dimensions including region, time period (monthly and yearly), and product categories. Implemented dynamic comparisons between current and previous year/month using time intelligence DAX functions to uncover sales trends and patterns. Calculated monthly and quarterly growth rates to highlight performance shifts and business opportunities. Additionally, categorized sales data by product category, payment method, and specific product types to identify key revenue drivers and optimize strategic decision-making.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#section3">
+          <h5 class="mb-0">Customer Report</h5>
+          <span class="section-toggle">+</span>
+        </div>
+        <div id="section3" class="collapse">
+          <div class="card-body">
+            <p>Performed in-depth customer analysis to identify top-ordering customers, track repeat purchase behavior, and analyze preferences across product categories. Measured customer retention by comparing churn rates(The percentage of customers who stopped ordering or became inactive over a specific period (usually monthly or quarterly)) month-over-month and monitored new customer acquisition trends on a monthly, quarterly, and yearly basis. This analysis provided valuable insights into customer loyalty, behavioral patterns, and product affinity—helping to optimize customer engagement strategies and enhance lifetime value.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#section4">
+          <h5 class="mb-0">Feedback Report</h5>
+          <span class="section-toggle">+</span>
+        </div>
+        <div id="section4" class="collapse">
+          <div class="card-body">
+            <p>Analyzed customer feedback by categorizing reviews based on sentiment, product categories, and customer segments. This helped in identifying recurring issues, areas of improvement, and product-specific concerns. Segmenting feedback enabled a deeper understanding of customer needs and expectations, allowing the business to align offerings with demand and discover new product opportunities.</p>
+          </div>
+        </div> 
+      </div>
+
+  
+    </div>
+
+    <!-- Download Button -->
+    <div class="text-center">
+      <a href="https://dinesh-maker.github.io/Portfolio/Blinkit_final_project.pdf" target="_blank" download class="download-button">Download Project PDF</a>
+    </div>
+
+    <!-- Skills -->
+    <section class="py-5">
+      <h2 class="text-center mb-4">Skill Used</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="skill-card">
+            <div class="icon"><i class="fas fa-database"></i></div>
+            <h5>SQL</h5>
+            <p>Data querying and database management</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="skill-card">
+            <div class="icon"><i class="fas fa-chart-bar"></i></div>
+            <h5>Power BI</h5>
+            <p>Data visualization and dashboards</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="skill-card">
+            <div class="icon"><i class="fab fa-figma"></i></div>
+            <h5>Figma</h5>
+            <p>Design Theme and elements</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Links -->
+    <div class="d-flex justify-content-center">
+      <div class="d-flex social-links">
+        <a href="https://www.example.com" class="website mx-2" target="_blank" title="Website" style="background-color: #007bff; padding: 10px; border-radius: 50%; color: white;">
+          <i class="fas fa-globe"></i>
+        </a>
+        <a href="" class="linkedin mx-2" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="github mx-2" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="" class="gmail mx-2" title="Gmail">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Change + to − on toggle
+    $('#accordion .card-header').on('click', function () {
+      const icon = $(this).find('.section-toggle');
+      icon.text(icon.text() === '+' ? '−' : '+');
+      $('#accordion .card-header').not(this).find('.section-toggle').text('+');
+    });
+  </script>
+</body>
+</html>
